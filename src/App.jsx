@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Events from './components/Events';
-import Footer from './components/Footer';
+import Navbar from './Components/Navbar';
+import Hero from './Components/Hero';
+import Events from './Components/Events';
+import Footer from './Components/Footer';
 import './App.css'; // Main CSS file for overall styling
 
 const App = () => {

@@ -1,0 +1,115 @@
+/* Events section styles */
+.events-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px; /* Padding for the section */
+    color: #333; /* Darker text color for readability */
+    min-height: 400px; /* Minimum height for the events section */
+    background: #ffffff; /* Set a solid white background */
+    position: relative; /* Position relative for pseudo-elements */
+    overflow: hidden; /* Hide overflow for pseudo-elements */
+}
+
+/* Add gradient overlay for visual interest */
+.events-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(120deg, rgba(94, 114, 228, 0.8), rgba(182, 161, 255, 0.8)); /* Gradient similar to hero */
+    opacity: 0.3; /* Light opacity for subtle effect */
+    z-index: 1; /* Position below content */
+}
+
+/* Events title styles */
+.events-title {
+    font-size: 3.2em; /* Title font size */
+    font-weight: bold; /* Bold title */
+    margin-bottom: 30px; /* Spacing below title */
+    text-shadow: 6px 6px 2px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
+    color: #ffffff; /* Change title color to  */
+    position: relative; /* Position relative fwhiteor stacking context */
+    z-index: 2; /* Position above the gradient */
+}
+
+/* Event cards container */
+.event-cards {
+    display: flex;
+    justify-content: center; /* Center cards horizontally */
+    flex-wrap: wrap; /* Wrap cards if they overflow */
+    gap: 20px; /* Space between cards */
+    z-index: 2; /* Position above the gradient */
+}
+
+/* Individual event card styles */
+.event-card {
+    background-color: #ffffff; /* White background for cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    padding: 20px; /* Padding within each card */
+    width: 300px; /* Fixed width for cards */
+    transition: transform 0.3s; /* Smooth transform effect */
+}
+
+/* Hover effect on event card */
+.event-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Title and date styles within the card */
+.event-title {
+    font-size: 1.8em; /* Title font size */
+    color: #1a1a1a; /* Dark text color for title */
+    margin-bottom: 10px; /* Space below title */
+    font-family: 'Inter', sans-serif; /* Set font to match Hero */
+}
+
+.event-date {
+    font-size: 1.2em; /* Date font size */
+    color: #646cff; /* Use a blue color for the date to fit with hero */
+    margin-bottom: 15px; /* Space below date */
+}
+
+/* Event description styles */
+.event-description {
+    font-size: 1em; /* Description font size */
+    color: #444; /* Dark gray color for description */
+    margin-bottom: 15px; /* Space below description */
+}
+
+/* Call to action button styles */
+.cta-button {
+    background-color: #ff8a00; /* Bright orange background */
+    color: white; /* Button text color */
+    padding: 15px 25px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.1em; /* Button font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.cta-button:hover {
+    background-color: #e67e22; /* Darker orange on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .events-section {
+        text-align: center; /* Center text */
+    }
+
+    .event-cards {
+        flex-direction: column; /* Stack cards on smaller screens */
+        align-items: center; /* Center cards */
+    }
+
+    .event-card {
+        width: 90%; /* Full width on small screens */
+    }
+}

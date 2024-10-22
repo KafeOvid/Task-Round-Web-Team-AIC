@@ -1,0 +1,48 @@
+/* Footer styles */
+.footer {
+    background-color: #242424; /* Dark background */
+    color: #ffffff; /* White text color */
+    padding: 20px 0; /* Padding above and below */
+    text-align: center; /* Center text */
+    width: 100%; /* Full width */
+    position: relative; /* For any potential absolute positioned child elements */
+}
+
+/* Footer content styles */
+.footer-content {
+    max-width: 1200px; /* Limit width of the footer content */
+    margin: 0 auto; /* Center the content */
+    padding: 0 20px; /* Side padding */
+}
+
+/* Social icons styles */
+.social-icons {
+    margin-top: 10px; /* Space above social icons */
+    display: flex; /* Use flexbox for social icons alignment */
+    justify-content: center; /* Center icons */
+}
+
+.social-icons a {
+    margin: 0 15px; /* Space between icons */
+    color: #ffffff; /* Icon color */
+    font-size: 1.5em; /* Icon size */
+    transition: transform 0.3s, color 0.3s; /* Smooth scaling and color change on hover */
+}
+
+/* Change color on hover */
+.social-icons a:hover {
+    transform: scale(1.1); /* Slightly enlarge icons on hover */
+    color: #646cff; /* Change icon color on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px 0; /* Reduced padding on smaller screens */
+    }
+
+    .social-icons a {
+        margin: 0 8px; /* Reduced space between icons on smaller screens */
+        font-size: 1.3em; /* Smaller icon size on mobile */
+    }
+}

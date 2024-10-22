@@ -1,0 +1,94 @@
+/* Hero section styles */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(120deg, rgba(94, 114, 228, 0.8), rgba(182, 161, 255, 0.8)), url('path/to/ai-hero.jpg') no-repeat center center/cover;
+    padding: 70px 40px; /* Padding for the hero section */
+    color: #ffffff; /* Text color */
+    min-height: 400px; /* Minimum height for the hero section */
+    position: relative; /* Position relative for overlay */
+}
+
+/* Hero content styles */
+.hero-content {
+    max-width: 600px; /* Limit width of the text content */
+    z-index: 2; /* Ensure content is above the background image */
+}
+
+.hero-title {
+    font-size: 3.5em; /* Title font size */
+    font-weight: bold; /* Bold title */
+    margin-bottom: 20px; /* Spacing below title */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
+}
+
+.hero-description {
+    font-size: 1.2em; /* Smaller description font size */
+    margin-bottom: 20px; /* Spacing below description */
+    line-height: 1.6; /* Line height for better readability */
+    text-align: left; /* Align text to the left */
+}
+
+
+/* Hero image styles */
+.hero .hero-image {
+    max-width: 250px; /* Maximum width of the image */
+    width: 100%; /* Make it responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Softer shadow for depth */
+    opacity: 0.9; /* Slight transparency for a layered effect */
+    transition: transform 0.3s; /* Smooth scaling effect */
+    margin-left: 40px; /* Add spacing between text and image */
+}
+
+.hero .hero-image:hover {
+    transform: scale(1.05); /* Slight scale on hover */
+}
+
+/* Call to action button styles */
+.cta-button {
+    background-color: #ff8a00; /* Bright orange background */
+    color: white; /* Button text color */
+    padding: 15px 30px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1.2em; /* Button font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+.cta-button:hover {
+    background-color: #e67e22; /* Darker orange on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* Stack elements on smaller screens */
+        text-align: center; /* Center text */
+        padding: 40px 20px; /* Reduced padding for smaller screens */
+    }
+
+    .hero-content {
+        max-width: 90%; /* Full width on small screens */
+        margin-bottom: 20px; /* Space between content and image */
+    }
+
+    .hero-title {
+        font-size: 2.8em; /* Smaller title font size */
+    }
+
+    .hero-description {
+        font-size: 1.3em; /* Smaller description font size */
+    }
+
+    .hero-image {
+        max-width: 100%; /* Full width image on small screens */
+        margin-top: 20px; /* Spacing above the image */
+        margin-left: 0; /* Reset left margin on small screens */
+    }
+}

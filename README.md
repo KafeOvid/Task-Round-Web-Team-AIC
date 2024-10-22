@@ -10,7 +10,7 @@ This project is designed to showcase the capabilities of the AI Web Task Round. 
 - **Real-time Data Processing**: Fetches and displays data dynamically.
 
 ## Technologies Used
-- **Frontend**: React, Vite, CSS
+- **Frontend**: React, Vite, Html ,CSS , JavaScript
 - **Backend**: Node.js (if applicable)
 - **Database**: MongoDB (or other databases used)
 

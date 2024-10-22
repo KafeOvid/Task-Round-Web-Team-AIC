@@ -12,27 +12,28 @@
 
 /* Hero content styles */
 .hero-content {
-    max-width: 600px; /* Limit width of the text content */
+    max-width: 700px; /* Limit width of the text content */
     z-index: 2; /* Ensure content is above the background image */
+    flex-direction: row;
+    margin: 3em;
 }
 
 .hero-title {
     font-size: 3.5em; /* Title font size */
     font-weight: bold; /* Bold title */
-    margin-bottom: 20px; /* Spacing below title */
+    margin-bottom: 15px; /* Spacing below title */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for better readability */
 }
 
 .hero-description {
     font-size: 1.2em; /* Smaller description font size */
-    margin-bottom: 20px; /* Spacing below description */
+    margin-bottom: 10px; /* Spacing below description */
     line-height: 1.6; /* Line height for better readability */
     text-align: left; /* Align text to the left */
 }
 
-
 /* Hero image styles */
-.hero .hero-image {
+.hero-image {
     max-width: 250px; /* Maximum width of the image */
     width: 100%; /* Make it responsive */
     height: auto; /* Maintain aspect ratio */
@@ -40,7 +41,7 @@
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Softer shadow for depth */
     opacity: 0.9; /* Slight transparency for a layered effect */
     transition: transform 0.3s; /* Smooth scaling effect */
-    margin-left: 40px; /* Add spacing between text and image */
+    /* margin-right: 5em; Remove top margin to reduce space */
 }
 
 .hero .hero-image:hover {
@@ -66,7 +67,7 @@
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .hero {
         flex-direction: column; /* Stack elements on smaller screens */
         text-align: center; /* Center text */
@@ -75,7 +76,7 @@
 
     .hero-content {
         max-width: 90%; /* Full width on small screens */
-        margin-bottom: 20px; /* Space between content and image */
+        margin-bottom: 10px; /* Reduced space between content and image */
     }
 
     .hero-title {
@@ -88,7 +89,7 @@
 
     .hero-image {
         max-width: 100%; /* Full width image on small screens */
-        margin-top: 20px; /* Spacing above the image */
+        margin-top: 10px; /* Reduced spacing above the image */
         margin-left: 0; /* Reset left margin on small screens */
     }
 }

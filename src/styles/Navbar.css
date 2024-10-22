@@ -5,7 +5,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for depth */
+    position: relative; /* Allows absolute positioning for dropdown */
 }
 
 /* Logo styles */
@@ -32,6 +33,7 @@
     padding: 0;
     margin: 0;
     display: flex; /* Horizontal layout */
+    transition: opacity 0.3s ease; /* Smooth transition for visibility */
 }
 
 /* Navigation link styles */
@@ -49,7 +51,7 @@
 /* Hover effect for links */
 .nav-links a:hover {
     color: #ff8a00; /* Bright orange on hover */
-    transform: translateY(-2px); /* Slight lift effect */
+    transform: translateY(-3px); /* Slight lift effect */
 }
 
 /* Join button styles */
@@ -65,7 +67,7 @@
 
 .join-button:hover {
     background-color: #e67e22; /* Darker orange on hover */
-    transform: translateY(-2px); /* Slight lift effect */
+    transform: translateY(-3px); /* Slight lift effect */
 }
 
 /* Menu toggle styles */
@@ -80,28 +82,33 @@
 
 /* Responsive styles */
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show menu toggle button on mobile screens */ 
+    }
+
     .nav-links {
-        display: none; /* Hide links on smaller screens */
-        flex-direction: column; /* Stack links vertically */
-        position: absolute; /* Position absolute for dropdown */
-        top: 60px; /* Position below navbar */
-        left: 0; /* Align to the left */
-        right: 0; /* Align to the right */
-        background: #5e72e4; /* Background for dropdown */
-        padding: 20px 0; /* Padding */
-        z-index: 1; /* Ensure it's on top of other content */
+        display: none; /* Hide links on smaller screens by default */
+        flex-direction: column; /* Stack links vertically when shown */
+        position: absolute; 
+        top: calc(100% + 10px); /* Position below navbar with additional spacing */ 
+        left: 0;
+        right: 0;
+        background-color: #5e72e4; 
+        z-index: 1000; /* Ensure dropdown is above other content */ 
+        visibility: hidden; /* Use visibility instead of display for smoother transitions */ 
+        opacity: 0; 
+        transition: visibility 0s, opacity 0.5s linear; /* Smooth transition for visibility and opacity */ 
     }
 
     .nav-links.active {
-        display: flex; /* Show nav links when active (menu is open) */
-    }
-
-    /* Show the menu toggle button */
-    .menu-toggle {
-        display: block; /* Show menu toggle button on mobile */
+        display: flex; /* Show links when the menu is active */
+        visibility: visible; 
+        opacity: 1; 
+        max-height: 100vh; /* Allow dropdown to expand fully */ 
+        transition: opacity 0.3s ease; /* Smooth transition when becoming visible */
     }
 
     .join-button {
-        display: none; /* Hide join button on smaller screens */
+        display: none; /* Hide join button on smaller screens */ 
     }
 }

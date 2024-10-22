@@ -3,7 +3,7 @@
 ## Overview
 This project is designed to showcase the capabilities of the AI Web Task Round. It includes various features and functionalities that demonstrate the integration of AI technologies in web applications.
 
-## Features
+## Features (NOT IMPLEMENTED)
 - **User Authentication**: Secure login and registration system.
 - **AI Integration**: Utilizes AI models for enhanced user experience.
 - **Responsive Design**: Mobile-friendly layout for accessibility on all devices.
@@ -11,8 +11,8 @@ This project is designed to showcase the capabilities of the AI Web Task Round. 
 
 ## Technologies Used
 - **Frontend**: React, Vite, Html ,CSS , JavaScript
-- **Backend**: Node.js (if applicable)
-- **Database**: MongoDB (or other databases used)
+- **Backend**: Node.js (if applicable)(NOT USED)
+- **Database**: MongoDB (or other databases used)(NOT USED)
 
 ## Getting Started
 

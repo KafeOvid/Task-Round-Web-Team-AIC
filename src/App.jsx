@@ -1,10 +1,10 @@
 // src/App.jsx
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './Components/Navbar';
-import Hero from './Components/Hero';
-import Events from './Components/Events';
-import Footer from './Components/Footer';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Events from './components/Events';
+import Footer from './components/Footer';
+import './App.css'; // Main CSS file for overall styling
 
 const App = () => {
     return (
